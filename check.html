@@ -1,0 +1,12 @@
+<body>
+    <script>
+        if (window.parent) {
+            console.log(navigator.cookieEnabled);
+            if (navigator.cookieEnabled) {
+                window.parent.postMessage('COOKIE_SUPPORT', '*');
+            } else {
+                window.parent.postMessage('COOKIE_UNSUPPORT', '*');
+            }
+        }
+    </script>
+</body>
